@@ -1,20 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
+import TodoList from './components/TodoList';
 import './App.css';
 
 const App: React.FC = () => {
+  const [num, setNum] = useState(0);
   return (
     /**
      * ? react.FC类型约束了jsx中的属性，如错写className为class并不存在，编译时检测到错误
      */
     <div className='todo-wrapper'>
-      <Header todoNum={0} />
-      <ul>
-        <li>
-          <input type='checkbox' ng-model='todo.done' />
-          <span className='done-{{todo.done}}'>1111</span>
-        </li>
-      </ul>
+      <Header todoNum={num} />
+      <TodoList />
       <form>
         <input
           className='add-input'
@@ -23,7 +20,7 @@ const App: React.FC = () => {
           ng-model='formTodoText'
           ng-model-instant
         />
-        <button className='add-btn' ng-click='addTodo()'>
+        <button className='add-btn'>
           <h2>Add</h2>
         </button>
       </form>
