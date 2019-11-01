@@ -33,7 +33,7 @@ li {
   font-family: megrim, fantasy;
   font-size: 2em;
   padding: 40px;
-
+  cursor: pointer;
   background: #65d8cb; /* Old browsers */
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#65d8cb), to(#72f4e9));
   background: -webkit-linear-gradient(#65d8cb 0%, #72f4e9 100%);
@@ -43,7 +43,7 @@ li {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65d8cb', endColorstr='#72f4e9',GradientType=0 );
   list-style-type: none;
   margin-left: 0px;
-  padding-left: 0px;
+  /* padding-left: 0px; */
 }
 
 li input[type='checkbox'] {
